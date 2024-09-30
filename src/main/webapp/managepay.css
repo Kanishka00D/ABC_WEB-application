@@ -1,0 +1,222 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Modern and clean font */
+  box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+  background-color: #F0F4F8; /* Soft background for cleanliness */
+}
+
+/* Header Section */
+header {
+  background-color: #005B96; /* Deep blue for a contemporary feel */
+  color: white;
+  padding: 20px 10%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+header .navbar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header .navbar a:hover {
+  background-color: #003D72; /* Darker blue for hover effect */
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  background-color: #005B96;
+  color: #FFFFFF;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #005B96;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #FFFFFF;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #003D72; /* Slightly darker blue for dropdown items */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#menu-bar {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: #1a252f;
+    border-radius: 5px;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 80px; /* Adjusted for header height */
+}
+
+/* Manage Payment Section */
+#manage-payment {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+#manage-payment h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+#payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#payment-form label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#payment-form input[type="text"],
+#payment-form input[type="number"],
+#payment-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+#payment-form input[type="text"]:focus,
+#payment-form input[type="number"]:focus,
+#payment-form select:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+#payment-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#payment-form button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+#payment-form button:hover {
+    background-color: #1a252f;
+}
+
+#payment-form #cancel-button {
+    background-color: #e74c3c;
+}
+
+#payment-form #cancel-button:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    #menu-bar {
+        display: block;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #manage-payment {
+        padding: 20px;
+        margin-top: 20px; /* Added margin for spacing */
+    }
+}

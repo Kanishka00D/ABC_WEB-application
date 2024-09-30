@@ -1,0 +1,206 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Modern and clean font */
+  box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+  background-color: #F0F4F8; /* Soft background for cleanliness */
+}
+
+/* Header Section */
+header {
+  background-color: #005B96; /* Deep blue for a contemporary feel */
+  color: white;
+  padding: 20px 10%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+header .navbar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header .navbar a:hover {
+  background-color: #003D72; /* Darker blue for hover effect */
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  background-color: #005B96;
+  color: #FFFFFF;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #005B96;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #FFFFFF;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #003D72; /* Slightly darker blue for dropdown items */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#menu-bar {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: #c9302c; /* Darker Red */
+    border-radius: 5px;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Section Titles */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #d9534f; /* Warm Red Header for Table */
+    color: white;
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Button Styles */
+button {
+    padding: 8px 12px;
+    background-color: #d9534f; /* Warm Red Button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #c9302c; /* Darker Red Hover */
+}
+
+button[type="button"] {
+    background-color: #e74c3c; /* Alternate Button Color */
+}
+
+button[type="button"]:hover {
+    background-color: #c0392b; /* Darker Alternate Button Color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    #menu-bar {
+        display: block;
+    }
+
+    main {
+        padding: 10px;
+    }
+}

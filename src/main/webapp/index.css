@@ -1,0 +1,210 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+  background-color: #F0F4F8; /* Soft background for cleanliness */
+}
+
+/* Header Section */
+header {
+  background-color: #005B96; /* Deep blue for a contemporary feel */
+  color: white;
+  padding: 20px 10%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+header .navbar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header .navbar a:hover {
+  background-color: #003D72; /* Darker blue for hover effect */
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  background-color: #005B96;
+  color: #FFFFFF;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #005B96;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #FFFFFF;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #003D72;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#menu-bar {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+section.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  background: url('img/home_bg.jpg') no-repeat center center/cover;
+}
+
+section.home .content {
+  max-width: 600px;
+  color: #333;
+  text-align: left;
+}
+
+section.home h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #003D72; /* Deep blue for headings */
+}
+
+section.home p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+section.home .btn {
+  padding: 0.8rem 2rem;
+  background-color: #003D72;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+section.home .btn:hover {
+  background-color: #002F5D;
+}
+
+section.speciality {
+  padding: 5% 10%;
+  background-color: #FFFFFF;
+}
+
+section.speciality .heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #005B96; 
+}
+
+section.speciality .heading span {
+  color: #003D72;
+}
+
+section.speciality .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section.speciality .box {
+  width: 30%;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.speciality .box img.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+section.speciality .content {
+  padding: 1rem;
+  text-align: center;
+}
+
+section.speciality .content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+section.speciality .content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+section.speciality .content img {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+
+/* Footer Section Styling */
+footer {
+  background-color: #005B96;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #FFFFFF;
+}

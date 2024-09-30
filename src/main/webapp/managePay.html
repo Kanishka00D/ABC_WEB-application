@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ABC Restaurant</title>
+    <link rel="stylesheet" href="managepay.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>ABC Restaurant</a>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a href="admin-dashboard.jsp">Manage Reservations</a>
+            <a href="managePay.html">Manage Payment</a>
+            <a href="manageQueries.html">Respond to Queries</a>
+            <a href="Reports.html">Generate Reports</a>
+            <a href="manageGallery.html">Manage gallery</a>
+            <a href="register.jsp"> Register</a>
+            <a href="index.jsp">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Manage Payment Section -->
+        <section id="manage-payment">
+            <h2>Manage Payment</h2>
+            <form id="payment-form">
+                <label for="payment-id">Payment ID</label>
+                <input type="text" id="payment-id" name="payment-id" placeholder="Enter Payment ID" required>
+                
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter Amount" required>
+                
+                <label for="payment-status">Payment Status</label>
+                <select id="payment-status" name="payment-status" required>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                    <option value="failed">Failed</option>
+                </select>
+
+                <button type="submit">Update Payment</button><br>
+                <button type="button" id="cancel-button">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+
+    <script src="managepay.js"></script>
+</body>
+</html>

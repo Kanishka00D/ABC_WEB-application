@@ -1,0 +1,255 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+  background-color: #F0F4F8; 
+  height: 100vh; /* Ensure full height for flexbox centering */
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+}
+
+/* Header Section */
+header {
+  background-color: #005B96; 
+  color: white;
+  padding: 20px 10%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+header .navbar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header .navbar a:hover {
+  background-color: #003D72;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  background-color: #005B96;
+  color: #FFFFFF;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #005B96;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #FFFFFF;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #003D72; 
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#menu-bar {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    header .navbar {
+        flex-direction: column;
+        display: none; /* Hidden by default */
+    }
+
+    #menu-bar {
+        display: block; /* Show menu icon */
+    }
+
+    /* Show the navbar when the menu icon is clicked */
+    #menu-bar.active + .navbar {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 15px 10px;
+        width: 100%; /* Make links take full width */
+    }
+}
+
+/* Availability Form Styles */
+.availability-form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 80px; /* Spacing below header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.availability-form-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ff5722; /* Consistent with header and dropdown */
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.availability-form-container h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ff5722; /* Same as h2 color */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #ff5722; /* Highlight color */
+    outline: none;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-btn {
+    background-color: #ff5722; /* Consistent button color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 48%;
+    transition: background-color 0.3s ease;
+}
+
+.check-btn:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
+
+.cancel-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 48%;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #444;
+}
+
+/* Responsive for Availability Form */
+@media screen and (max-width: 768px) {
+    .availability-form-container {
+        padding: 20px;
+        margin-top: 60px; /* Adjust for smaller screens */
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .check-btn,
+    .cancel-btn {
+        width: 100%;
+        margin-bottom: 10px; /* Space between buttons */
+    }
+}

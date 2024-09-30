@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ABC Restaurant</title>
+    <link rel="stylesheet" href="manageQueries.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>ABC Restaurant</a>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a href="admin-dashboard.jsp">Manage Reservations</a>
+            <a href="managePay.html">Manage Payment</a>
+            <a href="manageQueries.html">Respond to Queries</a>
+            <a href="Reports.html">Generate Reports</a>
+            <a href="manageGallery.html">Manage gallery</a>
+            <a href="register.jsp"> Register</a>
+            <a href="index.jsp">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="respond-queries">
+            <h2>Respond to Queries</h2>
+            <form id="query-form">
+                <label for="query-id">Query ID:</label>
+                <input type="text" id="query-id" name="query-id" placeholder="Enter Query ID" required>
+                
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" placeholder="Enter Customer Name" required>
+                
+                <label for="query-response">Response:</label>
+                <textarea id="query-response" name="query-response" placeholder="Type your response here" required></textarea>
+                
+                <button type="submit">Send Response</button>
+                <button type="button" onclick="window.location.href='menu.html'">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+
+    <script src="queryrespone.js"></script>
+</body>
+</html>
